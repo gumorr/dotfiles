@@ -1,0 +1,3 @@
+[submodule "awesome/dot-config/awesome/widgets/deficient"]
+	path = awesome/dot-config/awesome/widgets/deficient
+	url = https://github.com/deficient/deficient

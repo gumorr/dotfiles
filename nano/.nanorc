@@ -1,0 +1,31 @@
+# Syntax highlights (path might be different)
+include "/usr/share/nano/*.nanorc"
+include "/usr/share/nano/extra/*.nanorc"
+
+# Options
+set tabsize 4
+set tabstospaces
+set linenumbers
+set numbercolor yellow,normal
+set indicator   # side-bar for indicating cur position
+set smarthome   # `Home` jumps to line start first
+set afterends   # `Ctrl+Right` move to word ends instead of word starts
+set wordchars "_"   # recognize '_' as part of a word
+set zap             # delete selected text as a whole
+set historylog      # remember search history
+set multibuffer     # read files into multibuffer instead of insert
+set mouse       # enable mouse support
+set nohelp      # hide shortcut buttons
+
+# Bindings
+bind ^Z   undo          main
+bind ^Y   redo          main
+bind ^C   copy          main
+bind ^X   cut           main
+bind ^V   paste         main
+bind ^Q   exit          all
+
+bind ^F   whereis      all
+bind ^R   replace       main
+
+bind ^H   help          all
