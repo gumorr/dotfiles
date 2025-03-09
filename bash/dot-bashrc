@@ -1,0 +1,55 @@
+#
+# ~/.bashrc
+#
+
+# if not running interactively, dont do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+
+# path to additional bash files
+export BASH_FILES=$HOME/.bash_files
+
+
+# command history config
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# save multi-line commands as one command
+shopt -s cmdhist
+
+# re-edit the command line for failing history expansions
+shopt -s histreedit
+
+# re-edit the result of history expansions
+shopt -s histverify
+
+# save history with newlines instead of ; where possible
+shopt -s lithist
+
+# avoid duplicate entries
+HISTCONTROL="erasedups:ignoreboth"
+
+# history file max size
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+
+# load additional config files (aliases, prompt shit, etc)
+
+
+# load aliases
+if [ -f $HOME/.bash_aliases ]; then
+    source $HOME/.bash_aliases
+fi
+
+# git prompt
+if [ -f $BASH_FILES/git-prompt.sh ]; then
+    source $BASH_FILES/git-prompt.sh
+fi
+
+# set prompt string
+PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '

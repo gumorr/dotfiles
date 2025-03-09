@@ -1,0 +1,10 @@
+#
+# ~/.profile
+#
+
+# local bin directory
+export PATH=$PATH:~/.local/bin
+
+# prefered editor
+export EDITOR=nano
+export VISUAL=nano

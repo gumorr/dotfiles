@@ -1,0 +1,13 @@
+#
+# ~/.bash_profile
+#
+
+# load login settings and environment variables
+if [[ -f ~/.profile ]]; then
+  source ~/.profile
+fi
+
+# load interactive settings
+if [[ -f ~/.bashrc ]]; then
+  source ~/.bashrc
+fi
