@@ -36,7 +36,7 @@ awful.rules.rules = {
 
 
 	-- vesktop only opens in chat
-	{ rule = { class = "vesktop" },
+	{ rule_any = { class = { "discord", "vesktop" } },
 		properties = { tag = "chat" }
 	},
 

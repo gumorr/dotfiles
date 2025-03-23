@@ -40,7 +40,6 @@ HISTFILESIZE=2000
 
 # load additional config files (aliases, prompt shit, etc)
 
-
 # load aliases
 if [ -f $HOME/.bash_aliases ]; then
     source $HOME/.bash_aliases
