@@ -5,6 +5,9 @@
 # local bin directory
 export PATH=$PATH:~/.local/bin
 
+# ssh agent shit (systemctl enable --user ssh-agent.service)
+export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/ssh-agent.socket
+
 # prefered editor
 export EDITOR=nano
 export VISUAL=nano

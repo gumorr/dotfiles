@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# launch windows vm along with viewer
+
+# vm info
+QEMU_SESSION="qemu:///system"
+VM_NAME="win10"
+
+# get status
+VM_STATUS=$(virsh -c "$QEMU_SESSION" domstate "$VM_NAME")
+
+# take action on vm depending on VM_STATUS
+case $VM_STATUS in
+    "running")
+        # do nothing
+        ;;
+
+    "paused")
+        # unpause vm
+        virsh -c "$QEMU_SESSION" resume "$VM_NAME"
+        ;;
+
+    *)
+        # launch vm
+        virsh -c "$QEMU_SESSION" start "$VM_NAME"
+        ;;
+esac
+
+# launch whatever viewer were using
+exec virt-manager -c "$QEMU_SESSION" --show-domain-console "$VM_NAME"
