@@ -37,12 +37,17 @@ local tags = {
 	{
 		name = "chat",
 		layout = awful.layout.suit.tile,
-		screen = 1
+		screen = 2
 	},
+    {
+        name = 'misc',
+        layout = awful.layout.suit.time,
+        screen = 1
+    },
 	{
 		name = "misc",
 		layout = awful.layout.suit.tile,
-		screen = 1
+		screen = 2
 	},
 
 

@@ -11,10 +11,6 @@ local menu_launcher = require("widgets.menu")
 local layoutbox_widget = require("widgets.layoutbox")
 local taglist_widget = require("widgets.taglist")
 local lowercase_textclock = require("widgets.lowercase_textclock")
-local battery_widget = deficient.battery_widget {
-	ac_prefix = "chg: ",
-	battery_prefix = "bat: ",
-}
 local volume_widget = deficient.volume_control {
 	listen = true,
 	timeout = 1.5,
@@ -71,7 +67,6 @@ awful.screen.connect_for_each_screen(function(s)
 			-- spacing_widget = wibox.widget.separator,
 			wibox.widget.systray(),
 			volume_widget,
-			battery_widget,
 			lowercase_textclock("%b. %-d, %-I:%M %p"),
 			s.layoutbox,
 		},
