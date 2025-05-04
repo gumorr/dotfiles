@@ -31,10 +31,12 @@ awful.screen.connect_for_each_screen(function(s)
 			awful.tag.add(tag.name, {
 				layout = tag.layout,
 				screen = s,
-				selected = i == 1
 			})
 		end
 	end
+
+    s.tags[1]:view_only()
+
 	s.promptbox = awful.widget.prompt()
 	s.layoutbox = layoutbox_widget.layoutbox(s)
 	s.taglist = taglist_widget.taglist(s)
