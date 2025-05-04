@@ -26,7 +26,7 @@ awful.rules.rules = {
 
 	-- set firefox to always map on "web" tag, and make sure only browser windows are tiled
 	{ rule = { class = "firefox" },
-		properties = { tag = "web" }
+		properties = { screen = 1, tag = "web" }
 	},
 
 	{ rule = { class = "firefox" },
@@ -37,13 +37,13 @@ awful.rules.rules = {
 
 	-- vesktop only opens in chat
 	{ rule_any = { class = { "discord", "vesktop" } },
-		properties = { tag = "chat" }
+		properties = { screen = 2, tag = "chat" }
 	},
 
 
 	-- steam only opens in game, all steam windows except main one are floating
 	{ rule_any = { class = { "steam", "steamwebhelper" } },
-		properties = { tag = "game" }
+		properties = { screen = 1, tag = "game" }
 	},
 
 	{ rule_any = { class = { "steam", "steamwebhelper" } },

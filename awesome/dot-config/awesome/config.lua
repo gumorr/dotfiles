@@ -40,8 +40,8 @@ local tags = {
 		screen = 2
 	},
     {
-        name = 'misc',
-        layout = awful.layout.suit.time,
+        name = "misc",
+        layout = awful.layout.suit.tile,
         screen = 1
     },
 	{
