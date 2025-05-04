@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# folder to store screenshot folders in
+screenshot_dir=$(xdg-user-dir PICTURES)/Screenshots
+
+# name of month folder to insert screenshots into
+month_dir=$(date '+%Y-%m')
+
+if [ ! -d "$screenshot_dir"/"$month_dir" ]; then
+    mkdir -p "$screenshot_dir"/"$month_dir"
+fi
+
+exec scrot -s -f -F "$screenshot_dir"/"$month_dir"/screenshot.png
