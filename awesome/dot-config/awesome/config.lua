@@ -14,7 +14,7 @@ local theme = gears.filesystem.get_configuration_dir() .. "themes/oxocarbon/them
 -- bindings
 local binds = {
 	main_modkey = "Mod4", -- for tab movement, launching apps, etc.
-	second_modkey = "Mod1" -- for window functions
+	second_modkey = "Control" -- for window functions
 }
 
 -- tags
