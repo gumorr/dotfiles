@@ -5,7 +5,7 @@ local beautiful = require("beautiful")
 -- default apps
 local apps = {
 	terminal = "kitty",
-	editor = os.getenv("EDITOR") or "emacs"
+	editor = os.getenv("EDITOR") or "nano"
 }
 
 -- theme
